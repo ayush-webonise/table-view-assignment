@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ListProductsTableViewCell : UITableViewCell
-@property (strong, nonatomic) IBOutlet UIImageView *imageViewProductImage;
+@interface DisplayProductsTableViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UILabel *labelProductName;
 @property (strong, nonatomic) IBOutlet UILabel *labelProductPrice;
-
+@property (strong, nonatomic) IBOutlet UILabel *labelManufactureDate;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewProductImage;
 @end

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F13D1FE61D926F0E00B83005 /* ListProductsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F13D1FE41D926F0E00B83005 /* ListProductsTableViewCell.m */; };
-		F13D1FE71D926F0E00B83005 /* ListProductsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F13D1FE51D926F0E00B83005 /* ListProductsTableViewCell.xib */; };
+		F15F42DA1D9B9F86005C4277 /* DisplayProductsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F15F42D81D9B9F86005C4277 /* DisplayProductsTableViewCell.m */; };
+		F15F42DB1D9B9F86005C4277 /* DisplayProductsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F15F42D91D9B9F86005C4277 /* DisplayProductsTableViewCell.xib */; };
 		F1871D361D917743001B4982 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1871D351D917743001B4982 /* main.m */; };
 		F1871D391D917743001B4982 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1871D381D917743001B4982 /* AppDelegate.m */; };
 		F1871D3F1D917743001B4982 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1871D3D1D917743001B4982 /* Main.storyboard */; };
@@ -20,9 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F13D1FE31D926F0E00B83005 /* ListProductsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListProductsTableViewCell.h; sourceTree = "<group>"; };
-		F13D1FE41D926F0E00B83005 /* ListProductsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListProductsTableViewCell.m; sourceTree = "<group>"; };
-		F13D1FE51D926F0E00B83005 /* ListProductsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListProductsTableViewCell.xib; sourceTree = "<group>"; };
+		F104E9D31D9D5167009CB0DD /* CommonConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonConstants.h; sourceTree = "<group>"; };
+		F15F42D71D9B9F74005C4277 /* DisplayProductsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayProductsTableViewCell.h; sourceTree = "<group>"; };
+		F15F42D81D9B9F86005C4277 /* DisplayProductsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayProductsTableViewCell.m; sourceTree = "<group>"; };
+		F15F42D91D9B9F86005C4277 /* DisplayProductsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisplayProductsTableViewCell.xib; sourceTree = "<group>"; };
 		F1871D311D917743001B4982 /* TableViewApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1871D351D917743001B4982 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F1871D371D917743001B4982 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,13 +74,14 @@
 				F1871D381D917743001B4982 /* AppDelegate.m */,
 				F1DDE3561D9532B600BDB4D5 /* AddProductsVC.h */,
 				F1DDE3571D9532B600BDB4D5 /* AddProductsVC.m */,
+				F104E9D31D9D5167009CB0DD /* CommonConstants.h */,
 				F1DDE34D1D94FDC500BDB4D5 /* ProductsList.h */,
 				F1DDE34E1D94FDC500BDB4D5 /* ProductsList.m */,
 				F1DDE3501D94FFE000BDB4D5 /* Products.h */,
 				F1DDE3511D94FFE000BDB4D5 /* Products.m */,
-				F13D1FE31D926F0E00B83005 /* ListProductsTableViewCell.h */,
-				F13D1FE41D926F0E00B83005 /* ListProductsTableViewCell.m */,
-				F13D1FE51D926F0E00B83005 /* ListProductsTableViewCell.xib */,
+				F15F42D71D9B9F74005C4277 /* DisplayProductsTableViewCell.h */,
+				F15F42D81D9B9F86005C4277 /* DisplayProductsTableViewCell.m */,
+				F15F42D91D9B9F86005C4277 /* DisplayProductsTableViewCell.xib */,
 				F1871D3D1D917743001B4982 /* Main.storyboard */,
 				F1871D401D917743001B4982 /* Assets.xcassets */,
 				F1871D421D917743001B4982 /* LaunchScreen.storyboard */,
@@ -155,8 +157,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1871D441D917743001B4982 /* LaunchScreen.storyboard in Resources */,
-				F13D1FE71D926F0E00B83005 /* ListProductsTableViewCell.xib in Resources */,
 				F1871D411D917743001B4982 /* Assets.xcassets in Resources */,
+				F15F42DB1D9B9F86005C4277 /* DisplayProductsTableViewCell.xib in Resources */,
 				F1871D3F1D917743001B4982 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,10 +171,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1DDE34F1D94FDC500BDB4D5 /* ProductsList.m in Sources */,
-				F13D1FE61D926F0E00B83005 /* ListProductsTableViewCell.m in Sources */,
 				F1DDE3521D94FFE000BDB4D5 /* Products.m in Sources */,
 				F1DDE3581D9532B600BDB4D5 /* AddProductsVC.m in Sources */,
 				F1871D391D917743001B4982 /* AppDelegate.m in Sources */,
+				F15F42DA1D9B9F86005C4277 /* DisplayProductsTableViewCell.m in Sources */,
 				F1871D361D917743001B4982 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

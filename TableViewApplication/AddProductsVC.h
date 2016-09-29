@@ -10,9 +10,9 @@
 #import "AppDelegate.h"
 #import "Products.h"
 #import "ProductsList.h"
-#import "ListProductsTableViewCell.h"
+#import "DisplayProductsTableViewCell.h"
+#import "CommonConstants.h"
 
 @interface AddProductsVC : UIViewController<UITableViewDataSource, UITableViewDelegate>
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end

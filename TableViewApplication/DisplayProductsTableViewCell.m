@@ -6,10 +6,10 @@
 //  Copyright © 2016 webonise. All rights reserved.
 //
 
-#import "ListProductsTableViewCell.h"
+#import "DisplayProductsTableViewCell.h"
 
-@implementation ListProductsTableViewCell
-@synthesize imageViewProductImage, labelProductName, labelProductPrice;
+@implementation DisplayProductsTableViewCell
+@synthesize labelProductName, labelProductPrice;
 
 - (void)awakeFromNib {
     [super awakeFromNib];

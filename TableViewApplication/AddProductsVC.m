@@ -8,28 +8,37 @@
 
 #import "AddProductsVC.h"
 
+@interface AddProductsVC(){
+    
+    IBOutlet UITableView *tableViewListProducts;
+}
+
+@end
+
 @implementation AddProductsVC
-@synthesize tableView;
+AppDelegate *appDelegate;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addProducts)];
+    appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(navigateToAddProducts)];
     self.navigationController.topViewController.navigationItem.rightBarButtonItem = item;
 }
 
 -(void) viewWillAppear:(BOOL)animated{
-    [self.tableView reloadData];
+    [super viewWillAppear:YES];
+    [self->tableViewListProducts reloadData];
 }
 
--(void)addProducts {
+-(void)navigateToAddProducts {
     NSLog(@"added");
     ProductsList *productsList = [self.storyboard instantiateViewControllerWithIdentifier:@"ProductsList"];
     [self.navigationController pushViewController:productsList animated:YES];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
+//    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     return [appDelegate.arrayProducts count];
 }
 
@@ -39,16 +48,16 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
-    static NSString *cellIdentifier = @"ListProductsTableViewCell";
-    ListProductsTableViewCell *listProductsTableViewCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    static NSString *cellIdentifier = @"DisplayProductsTableViewCell";
+    DisplayProductsTableViewCell *listProductsTableViewCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if(listProductsTableViewCell == nil)
     {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:cellIdentifier owner:self options:nil];
         listProductsTableViewCell = [nib objectAtIndex:0] ;
     }
-    
-    listProductsTableViewCell.imageViewProductImage.image = [UIImage imageNamed:@"Image"];
+     
+    listProductsTableViewCell.imageViewProductImage.image = [UIImage imageNamed:IMAGE_NAME];
     listProductsTableViewCell.labelProductName.text = [appDelegate.arrayProducts[indexPath.row] productName] ;
     listProductsTableViewCell.labelProductPrice.text = [appDelegate.arrayProducts[indexPath.row] productPrice];
     return listProductsTableViewCell;

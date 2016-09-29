@@ -27,6 +27,18 @@
     }
 }
 
+-(BOOL) isNumeric:(NSString*)isValidPrice{
+    BOOL valid;
+    NSCharacterSet *alphaNums = [NSCharacterSet decimalDigitCharacterSet];
+    NSCharacterSet *inStringSet = [NSCharacterSet characterSetWithCharactersInString:textFieldProductPrice.text];
+    valid = [alphaNums isSupersetOfSet:inStringSet];
+    if (!valid)
+        return NO;
+    else
+        return YES;
+}
+
+
 /** This function checks for validations whether the user has added only whitespaces in the text field
  * \returns Returns YES if the names and prices are added correctly else returns NO
  */
@@ -35,6 +47,11 @@
     if(![self isValid:textFieldProductName.text])
     {
         [textFieldProductName becomeFirstResponder];
+    }
+    else if(![self isNumeric:textFieldProductPrice.text])
+    {
+        [textFieldProductPrice becomeFirstResponder];
+        NSLog(@"enter valid price of the product ");
     }
     else if(![self isValid:textFieldProductPrice.text])
     {
