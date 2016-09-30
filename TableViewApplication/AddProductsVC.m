@@ -47,7 +47,7 @@ AppDelegate *appDelegate;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
+//     AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     static NSString *cellIdentifier = @"DisplayProductsTableViewCell";
     DisplayProductsTableViewCell *listProductsTableViewCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
