@@ -13,15 +13,15 @@
 @end
 
 @implementation AppDelegate
-@synthesize viewController, navigationController, window, arrayProducts;
+@synthesize rootVC, navigationController, window, arrayProducts;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     arrayProducts = [[NSMutableArray alloc]init];
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    viewController = [storyBoard instantiateViewControllerWithIdentifier:@"AddProductsVC"];
+    rootVC = [storyBoard instantiateViewControllerWithIdentifier:@"AddProductsVC"];
     
-    navigationController = [[UINavigationController alloc]initWithRootViewController:viewController];
+    navigationController = [[UINavigationController alloc]initWithRootViewController:rootVC];
     
     window = [[UIWindow alloc]init];
     [window setRootViewController:navigationController];
